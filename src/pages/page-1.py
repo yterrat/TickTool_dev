@@ -47,8 +47,7 @@ layout = html.Div([
     dcc.Link('Next page', href='/page-2'),
     html.Br(),
     html.Br(),
-], style={'border': '4px solid black', 'padding': '20px', 'border-radius' : '15px'}
-)
+])
 
 
 @callback(
