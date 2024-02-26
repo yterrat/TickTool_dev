@@ -62,3 +62,7 @@ def update_dic(Q1, data):
     data['Q1'] = Q1
     return data
 
+#git add
+# git commit -am "updated whatever"
+#git push
+

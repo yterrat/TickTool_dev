@@ -391,8 +391,7 @@ layout = html.Div([
     html.Br(),
     html.Br(),
     dbc.Progress(value=17, style={"height": "15px"}, className="mb-3", label = "17% done"),
-], style={'border': '4px solid black', 'padding': '20px', 'border-radius' : '15px'}
-)
+])
 
 # myquestions = []
 # for i in range(1,21):

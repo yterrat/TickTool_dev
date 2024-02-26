@@ -53,8 +53,7 @@ layout = html.Div([
     units = '',
     id='gauge3'
     )
-], style={'border': '4px solid black', 'padding': '20px', 'border-radius' : '25px'}
-)
+])
 
 # @callback([Output(component_id='gauge1', component_property='value'),
 #           Output(component_id='gauge2', component_property='value'),
