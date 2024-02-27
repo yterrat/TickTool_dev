@@ -13,7 +13,9 @@ from flask import request
 dash.register_page(__name__, path='/page-9')
 
 layout = html.Div([
-    html.Img(src='/assets/logo-white.png', style={'width': '10%', 'height': '10%'}), 
+    html.Img(src='/assets/TickTOOL_logo.png', style={'width': '40%', 'height': '40%'}, className='image-gallery'),
+    html.Hr(className='orange_line'),
+    html.Br(),
     html.H1('your personalized report', style={'text-align' : 'center', 'font-size' : '40px', "font-weight": "bold"}),
     html.Br(),
     html.P('Potential for BLT in environment', style={'font-size' : '20px', "font-weight": "bold"}),
