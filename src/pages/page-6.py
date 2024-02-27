@@ -178,8 +178,7 @@ layout = html.Div([
                             {'label': "Rarely", 'value': "Rarely"},
                             {'label': "Sometimes", 'value': "Sometimes"},
                             {'label': "Most of the time", 'value': "Most of the time"},
-                            {'label': "Always", 'value': "Always"},
-                            {'label': "Not applicable", 'value': "Not applicable"}
+                            {'label': "Always", 'value': "Always"}
                         ],
                         inputStyle={"margin-right": "10px"},
                         value=''
@@ -196,8 +195,7 @@ layout = html.Div([
                             {'label': "Rarely", 'value': "Rarely"},
                             {'label': "Sometimes", 'value': "Sometimes"},
                             {'label': "Most of the time", 'value': "Most of the time"},
-                            {'label': "Always", 'value': "Always"},
-                            {'label': "Not applicable", 'value': "Not applicable"}
+                            {'label': "Always", 'value': "Always"}
                         ],
                         inputStyle={"margin-right": "10px"},
                         value=''
@@ -214,8 +212,7 @@ layout = html.Div([
                             {'label': "Rarely", 'value': "Rarely"},
                             {'label': "Sometimes", 'value': "Sometimes"},
                             {'label': "Most of the time", 'value': "Most of the time"},
-                            {'label': "Always", 'value': "Always"},
-                            {'label': "Not applicable", 'value': "Not applicable"}
+                            {'label': "Always", 'value': "Always"}
                         ],
                         inputStyle={"margin-right": "10px"},
                         value=''
@@ -390,7 +387,7 @@ layout = html.Div([
     dcc.Link('Next page', href='/page-7', style={'font-size': '20px'}),
     html.Br(),
     html.Br(),
-    dbc.Progress(value=77, style={"height": "15px"}, className="mb-3", label = "66% done")
+    dbc.Progress(value=66, style={"height": "15px"}, className="mb-3", label = "66% done")
 ])
 
 

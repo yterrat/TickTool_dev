@@ -23,7 +23,7 @@ layout = html.Div([
     html.P("What is your gender?", className='question_style2'),
     #Changre into ckeckbox
     html.Div([
-        dcc.Checklist(
+        dcc.Dropdown(
                 options=[
                     {'label': 'Gender-fluid', 'value': 'Gender-fluid'},
                     {'label': "Man", 'value': "Man"},
@@ -34,10 +34,9 @@ layout = html.Div([
                     {'label': "Women", 'value': "Women"},
                     {'label': "I don’t identify with any option provided ", 'value': "I don’t identify with any option provided "},
                     {'label': "I prefer not to answer ", 'value': "I prefer not to answer"}
-                ],
-                inputStyle={"margin-right": "10px"}
+                ]
             )],
-            style={'font-size': '15px', 'marginLeft' : '30px'}
+            style={'font-size': '15px'}
         ),
     html.Hr(className='grey_blue_line'),
     ######
@@ -45,7 +44,7 @@ layout = html.Div([
     ######
     html.P("How old are you? ",  className='question_style2'),
     html.Div([
-        dcc.RadioItems(
+        dcc.Dropdown(
                 options=[
                     {'label': 'I prefer not answer', 'value': 'I prefer not answer'},
                     {'label': "Under 18", 'value': "Under 18"},
@@ -56,10 +55,9 @@ layout = html.Div([
                     {'label': "55-64", 'value': "55-64"},
                     {'label': "65-74 ", 'value': "65-74"},
                     {'label': "75 or older", 'value': "75 or older"}
-                ],
-                inputStyle={"margin-right": "10px"}
+                ]
             )],
-            style={'font-size': '15px', 'marginLeft' : '30px'}
+            style={'font-size': '15px'}
         ),
     html.Hr(className='grey_blue_line'),
     ######
@@ -67,48 +65,47 @@ layout = html.Div([
     ######
     html.P("What is the highest level of formal education that you have completed to date?", className='question_style2'),
     html.Div([
-        dcc.RadioItems(
+        dcc.Dropdown(
                 options=[
+                    {'label': "I prefer not to answer ", 'value': "I prefer not to answer"},
                     {'label': 'Elementary school or less', 'value': 'Elementary school or less'},
                     {'label': "Some post-secondary school", 'value': "Some post-secondary school"},
                     {'label': "College, vocational or trade school", 'value': "College, vocational or trade school"},
                     {'label': "Undergraduate university program", 'value': "Undergraduate university program"},
-                    {'label': "Graduate or professional university program", 'value': "Graduate or professional university program"},
-                    {'label': "I prefer not to answer ", 'value': "I prefer not to answer"}
+                    {'label': "Graduate or professional university program", 'value': "Graduate or professional university program"}
                 ],
-                inputStyle={"margin-right": "10px"},
                 value=''
             ),
-        ], style={'font-size': '15px', 'marginLeft' : '30px'}),
+        ], style={'font-size': '15px'}),
     html.Hr(className='grey_blue_line'),
     ######
     # Q30
     ######
     html.P("Which of the following categories best describes your current employment status? ", className='question_style2'),
     html.Div([
-        dcc.RadioItems(
+        dcc.Dropdown(
                 options=[
+                    {'label': "I prefer not to answer ", 'value': "I prefer not to answer"},
                     {'label': 'Working full-time (35 or more hours per week)', 'value': 'Working full-time (35 or more hours per week)'},
                     {'label': "Self-employed", 'value': "Self-employed"},
                     {'label': "Student attending full time school (not working)", 'value': "Student attending full time school (not working)"},
                     {'label': "Unemployed, but looking for work", 'value': "Unemployed, but looking for work"},
                     {'label': "Retired", 'value': "Retired"},
                     {'label': "Unemployed, but looking for work", 'value': "Unemployed, but looking for work"},
-                    {'label': "Other", 'value': "Other"},
-                    {'label': "I prefer not to answer ", 'value': "I prefer not to answer"}
+                    {'label': "Other", 'value': "Other"}
                 ],
-                inputStyle={"margin-right": "10px"},
                 value=''
             ),
-        ], style={'font-size': '15px', 'marginLeft' : '30px'}),
+        ], style={'font-size': '15px'}),
     html.Hr(className='grey_blue_line'),
     ######
     # Q31
     ######
     html.P("Which of the following categories best describes your total household income? That is, the total income of all persons in your household, before taxes?", className='question_style2'),
     html.Div([
-        dcc.RadioItems(
+        dcc.Dropdown(
                 options=[
+                    {'label': "I prefer not to answer ", 'value': "I prefer not to answer"},
                     {'label': 'Under $20,000', 'value': 'Under $20,000'},
                     {'label': "$20,000 to just under $40,000", 'value': "$20,000 to just under $40,000"},
                     {'label': "$40,000 to just under $60,000", 'value': "$40,000 to just under $60,000"},
@@ -116,14 +113,11 @@ layout = html.Div([
                     {'label': "$80,000 to just under $100,000", 'value': "$80,000 to just under $100,000"},
                     {'label': "$100,000 to just under $120,000", 'value': "$100,000 to just under $120,000"},
                     {'label': "$120,000 to just under $150,000", 'value': "$120,000 to just under $150,000"},
-                    {'label': "$150,000 and above", 'value': "$150,000 and above"},
-                    {'label': "I prefer not to answer ", 'value': "I prefer not to answer"}
+                    {'label': "$150,000 and above", 'value': "$150,000 and above"}
                 ],
-                inputStyle={"margin-right": "10px"},
-                value='',
-                #id = 'QXXX'
+                value=''
             ),
-        ], style={'font-size': '15px', 'marginLeft' : '30px'}),
+        ], style={'font-size': '15px'}),
     html.Hr(className='grey_blue_line'),
     ######
     # Q31
@@ -132,10 +126,10 @@ layout = html.Div([
     html.Div([
         dcc.RadioItems(
                 options=[
+                    {'label': "I prefer not to answer ", 'value': "I prefer not to answer"},
                     {'label': 'English', 'value': 'English'},
                     {'label': "French", 'value': "French"},
-                    {'label': "Other (please specify)", 'value': "Other (please specify)"},
-                    {'label': "I prefer not to answer ", 'value': "I prefer not to answer"}
+                    {'label': "Other (please specify)", 'value': "Other (please specify)"}
                 ],
                 inputStyle={"margin-right": "10px"},
                 value='',
@@ -164,6 +158,7 @@ layout = html.Div([
         value='Any comments ?',
         style={'width': '100%', 'height': 300}
     ),
+    html.Br(),
     html.P('To access your personalised exposure profile report, please click here.', style={'font-size' : '20px', "font-weight": "bold"}),
     dcc.Link('Submit', href='/page-9', style={'font-size': '20px'}),
     html.Br(),
