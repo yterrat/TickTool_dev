@@ -10,14 +10,7 @@ import dash_bootstrap_components as dbc
 dash.register_page(__name__, path='/')
 
 layout = html.Div([
-    html.Div([
-        html.Img(src='/assets/TickTOOL_logo.png', style={'height': '30%', 'width' : '20%', 'float': 'left', 'display': 'inline-block'}),
-        html.Img(src='/assets/UdeM.png', style={'height': '25%', 'width' : '15%', 'float' : 'right', 'display': 'inline-block'})
-    ]),
-    html.Br(),
-    html.Br(),
-    #html.Img(src='/assets/TickTOOL_logo.png', className='image-gallery'),
-    #html.Br(),
+    html.Img(src='/assets/TickTOOL_logo.png', style={'width': '40%', 'height': '40%'}, className='image-gallery'),
     html.Hr(className='orange_line'),
     html.Br(),
     html.H1('Are you adapting to ticks ?', style={'textAlign' : 'center'}),
@@ -55,6 +48,9 @@ layout = html.Div([
     dcc.Link('Next page', href='/page-2', style={'font-size': '20px'}),
     html.Br(),
     html.Br(),
+    html.Img(src='/assets/UdeM.png', style={'width': '30%', 'height': '30%'}, className='image-gallery'),
+    html.Br(),
+    html.Br()
 ])
 
 

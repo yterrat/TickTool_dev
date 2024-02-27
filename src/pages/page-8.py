@@ -164,10 +164,8 @@ layout = html.Div([
         value='Any comments ?',
         style={'width': '100%', 'height': 300}
     ),
-    html.Br(),
-    html.Br(),
     html.P('To access your personalised exposure profile report, please click here.', style={'font-size' : '20px', "font-weight": "bold"}),
-    dcc.Link('Submit', href='/page-9'),
+    dcc.Link('Submit', href='/page-9', style={'font-size': '20px'}),
     html.Br(),
     html.Br(),
     dbc.Progress(value=100, style={"height": "15px"}, className="mb-3", label = "100% done"),

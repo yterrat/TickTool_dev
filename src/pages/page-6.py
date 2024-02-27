@@ -387,7 +387,7 @@ layout = html.Div([
     html.Br(),
     html.Br(), 
     html.Label(id= 'data_display', children = ''),
-    dcc.Link('Next page', href='/page-7'),
+    dcc.Link('Next page', href='/page-7', style={'font-size': '20px'}),
     html.Br(),
     html.Br(),
     dbc.Progress(value=77, style={"height": "15px"}, className="mb-3", label = "66% done")

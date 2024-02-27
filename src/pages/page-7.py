@@ -20,7 +20,6 @@ layout = html.Div([
     ######
     html.Br(),
     html.P("How confident are you that you can prevent a tick bite?", className='question_style2'),
-    html.Br(),
     html.Div([
         dcc.RadioItems(
             options=[
@@ -43,8 +42,6 @@ layout = html.Div([
     ######
     html.P("How confident are you that you could find a young tick (nymph, pictured) on your clothes or skin?",className='question_style2'),
     html.Img(src='/assets/tick1.jpg', style={'width': '100vw', 'height': 'auto'}),
-    html.Br(),
-    html.Br(),
     html.Div([
         dcc.RadioItems(
             options=[
@@ -68,8 +65,6 @@ layout = html.Div([
     html.P("How confident are you that you could find a young tick (nymph, pictured) on your clothes or skin?"
            , className= 'question_style2'),
     html.Img(src='/assets/tick2.jpg', style={'width': '100vw', 'height': 'auto'}),
-    html.Br(),
-    html.Br(),
     html.Div([
         dcc.RadioItems(
             options=[
@@ -92,7 +87,6 @@ layout = html.Div([
     ######
     html.P("How confident are you that you could safely and effectively remove a tick which had embedded into the skin?"
            , className= 'question_style2'),
-    html.Br(),
     html.Div([
         dcc.RadioItems(
             options=[
@@ -108,9 +102,7 @@ layout = html.Div([
         )
     ], style={'font-size': '15px',  'marginLeft' : '30px'}),
     html.Br(),
-    html.Br(),
-    dcc.Link('Next page', href='/page-8'),
-
+    dcc.Link('Next page', href='/page-8', style={'font-size': '20px'}),
     html.Br(),
     html.Br(),
     dbc.Progress(value=90, style={"height": "15px"}, className="mb-3", label = "90% done"),

@@ -95,13 +95,10 @@ layout = html.Div([
                 value='',
                 #id = 'QXXX'
             ),
-        ], style={'font-size': '15px', 'marginLeft' : '30px'}),
-        html.Br(),
-        html.Br(),
+        ], style={'font-size': '15px', 'marginLeft' : '30px'})
     ]),
     ######
     ######
-    html.Br(),
     ######
     ######
     # Q16
@@ -180,8 +177,7 @@ layout = html.Div([
             ),
     ], style={'font-size': '15px', 'marginLeft' : '30px', 'marginRight' : '30px'}),
     html.Br(),
-    html.Br(),
-    dcc.Link('Next page', href='/page-6'),
+    dcc.Link('Next page', href='/page-6', style={'font-size': '20px'}),
     html.Br(),
     html.Br(),
     dbc.Progress(value=63, style={"height": "15px"}, className="mb-3", label = "63% done"),

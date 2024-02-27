@@ -226,8 +226,7 @@ layout = html.Div([
     ######
     ######
     html.Br(),
-    html.Br(),
-    dcc.Link('Next page', href='/page-5'),
+    dcc.Link('Next page', href='/page-5', style={'font-size': '20px'}),
     html.Br(),
     html.Br(),
     dbc.Progress(value=50, style={"height": "15px"}, className="mb-3", label = "50% done"),

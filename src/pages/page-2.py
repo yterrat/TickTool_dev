@@ -377,11 +377,9 @@ layout = html.Div([
             ),
             html.Br()
         ], style={'font-size': '15px', 'marginLeft' : '30px'}),
-        html.Br(),
     ]),
     #######
     #######
-    html.Br(),
     dcc.Link('Next page', href='/page-3', style={'font-size': '20px'}),
     html.Br(),
     html.Br(),

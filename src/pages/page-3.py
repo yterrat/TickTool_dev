@@ -32,7 +32,7 @@ layout = html.Div([
     html.Br(),
     #######
     #######
-    html.Hr(style={'borderWidth': "0.3vh", "width": "100%", "color": "grey"}),
+    html.Hr(className='grey_blue_line'),
     html.Br(),
     html.P("How often do you engage in the following outdoor activities between the months of April and November? ", style={'font-size': '20px'}),
     html.Div([
@@ -163,7 +163,7 @@ layout = html.Div([
         ], style={'font-size': '15px', 'marginLeft' : '30px'}),
         html.Br(),
     ]),
-    dcc.Link('Next page', href='/page-4'),
+    dcc.Link('Next page', href='/page-4', style={'font-size': '20px'}),
     html.Br(),
     html.Br(),
     dbc.Progress(value=33, style={"height": "15px"}, className="mb-3", label = "33% done"),
