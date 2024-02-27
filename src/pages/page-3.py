@@ -8,8 +8,11 @@ import dash_bootstrap_components as dbc
 dash.register_page(__name__, path='/page-3')
 
 layout = html.Div([
-    html.Img(src='/assets/TickTOOL_logo.png', style={'width': '25%', 'height': '15%', 'padding-left' : '5%'}),
+    html.Img(src='/assets/TickTOOL_logo.png', style={'width': '40%', 'height': '40%'}, className='image-gallery'),
+    html.Hr(className='orange_line'),
+    html.Br(),
     html.H1('Are you outdoorsy ?', style={'text-align' : 'center'}),
+    html.Br(),
     html.Br(),
     html.P("As part of your primary occupation (including work or studies), \
            on average how much time do you spend daily in wooded or grassy areas between the months of April and November? ", style={'font-size': '20px'}),
@@ -34,122 +37,129 @@ layout = html.Div([
     html.P("How often do you engage in the following outdoor activities between the months of April and November? ", style={'font-size': '20px'}),
     html.Div([
         html.Div([
-            html.Label('Hiking or dog walking'),
+            html.Label('Hiking or dog walking',  style={'font-size': '20px'}),
             html.Br(),
             html.Br(),
-            dcc.Slider(0, 4,
-            step=1,
-            marks={
-                0: "never",
-                1: 'once or twice a season',
-                2: 'less than once a month',
-                3: 'every week',
-                4: 'every day'
-            },
-            value=0,
-            className='slider1')
+            dcc.RadioItems(
+                options=[
+                    {'label': 'Never', 'value': 'Never'},
+                    {'label': 'Once or twice a season', 'value': 'Once or twice a season'},
+                    {'label': 'Less than once a month', 'value': 'Less than once a month'},
+                    {'label': 'Every week', 'value': 'Every week'},
+                    {'label': 'Every day', 'value': 'Every day'}
+                ],
+                inputStyle={"margin-right": "10px"},
+                value='',
+                #id = 'Q21'
+            )
         ], style={'font-size': '15px', 'marginLeft' : '30px'}),
         html.Br(),
         html.Div([
-            html.Label('Camping'),
+            html.Label('Camping',  style={'font-size': '20px'}),
             html.Br(),
             html.Br(),
-            dcc.Slider(0, 4,
-            step=1,
-            marks={
-                0: "never",
-                1: 'once or twice a season',
-                2: 'less than once a month',
-                3: 'every week',
-                4: 'every day'
-            },
-            value=0,
-            className='slider1')
+            dcc.RadioItems(
+                options=[
+                    {'label': 'Never', 'value': 'Never'},
+                    {'label': 'Once or twice a season', 'value': 'Once or twice a season'},
+                    {'label': 'Less than once a month', 'value': 'Less than once a month'},
+                    {'label': 'Every week', 'value': 'Every week'},
+                    {'label': 'Every day', 'value': 'Every day'}
+                ],
+                inputStyle={"margin-right": "10px"},
+                value='',
+                #id = 'Q21'
+            )
         ], style={'font-size': '15px', 'marginLeft' : '30px'}),
         html.Br(),
         html.Div([
-            html.Label('Hunting'),
+            html.Label('Hunting',  style={'font-size': '20px'}),
             html.Br(),
             html.Br(),
-            dcc.Slider(0, 4,
-            step=1,
-            marks={
-                0: "never",
-                1: 'once or twice a season',
-                2: 'less than once a month',
-                3: 'every week',
-                4: 'every day'
-            },
-            value=0,
-            className='slider1')
+            dcc.RadioItems(
+                options=[
+                    {'label': 'Never', 'value': 'Never'},
+                    {'label': 'Once or twice a season', 'value': 'Once or twice a season'},
+                    {'label': 'Less than once a month', 'value': 'Less than once a month'},
+                    {'label': 'Every week', 'value': 'Every week'},
+                    {'label': 'Every day', 'value': 'Every day'}
+                ],
+                inputStyle={"margin-right": "10px"},
+                value='',
+                #id = 'Q21'
+            )
         ], style={'font-size': '15px', 'marginLeft' : '30px'}),
         html.Br(),
         html.Div([
-            html.Label('Gardening/yard work on your property'),
+            html.Label('Gardening/yard work on your property',  style={'font-size': '20px'}),
             html.Br(),
             html.Br(),
-            dcc.Slider(0, 4,
-            step=1,
-            marks={
-                0: "never",
-                1: 'once or twice a season',
-                2: 'less than once a month',
-                3: 'every week',
-                4: 'every day'
-            },
-            value=0,
-            className='slider1')
+            dcc.RadioItems(
+                options=[
+                    {'label': 'Never', 'value': 'Never'},
+                    {'label': 'Once or twice a season', 'value': 'Once or twice a season'},
+                    {'label': 'Less than once a month', 'value': 'Less than once a month'},
+                    {'label': 'Every week', 'value': 'Every week'},
+                    {'label': 'Every day', 'value': 'Every day'}
+                ],
+                inputStyle={"margin-right": "10px"},
+                value='',
+                #id = 'Q21'
+            )
         ], style={'font-size': '15px', 'marginLeft' : '30px'}),
         html.Br(),
         html.Div([
-            html.Label('Recreational sports and outdoor activities'),
+            html.Label('Recreational sports and outdoor activities',  style={'font-size': '20px'}),
             html.Br(),
             html.Br(),
-            dcc.Slider(0, 4,
-            step=1,
-            marks={
-                0: "never",
-                1: 'once or twice a season',
-                2: 'less than once a month',
-                3: 'every week',
-                4: 'every day'
-            },
-            value=0,
-            className='slider1')
+            dcc.RadioItems(
+                options=[
+                    {'label': 'Never', 'value': 'Never'},
+                    {'label': 'Once or twice a season', 'value': 'Once or twice a season'},
+                    {'label': 'Less than once a month', 'value': 'Less than once a month'},
+                    {'label': 'Every week', 'value': 'Every week'},
+                    {'label': 'Every day', 'value': 'Every day'}
+                ],
+                inputStyle={"margin-right": "10px"},
+                value='',
+                #id = 'Q21'
+            )
         ], style={'font-size': '15px', 'marginLeft' : '30px'}),
         html.Br(),
         html.Div([
-            html.Label('Woodcutting'),
+            html.Label('Woodcutting',  style={'font-size': '20px'}),
             html.Br(),
             html.Br(),
-            dcc.Slider(0, 4,
-            step=1,
-            marks={
-                0: "never",
-                1: 'once or twice a season',
-                2: 'less than once a month',
-                3: 'every week',
-                4: 'every day'
-            },
-            value=0,
-            className='slider1')
+            dcc.RadioItems(
+                options=[
+                    {'label': 'Never', 'value': 'Never'},
+                    {'label': 'Once or twice a season', 'value': 'Once or twice a season'},
+                    {'label': 'Less than once a month', 'value': 'Less than once a month'},
+                    {'label': 'Every week', 'value': 'Every week'},
+                    {'label': 'Every day', 'value': 'Every day'}
+                ],
+                inputStyle={"margin-right": "10px"},
+                value='',
+                #id = 'Q21'
+            )
         ], style={'font-size': '15px', 'marginLeft' : '30px'}),
         html.Br(),
         html.Div([
-            html.Label('Other outdoor activities'),
+            html.Label('Other outdoor activities',  style={'font-size': '20px'}),
             html.Br(),
             html.Br(),
-            dcc.Slider(0, 4,
-            step=1,
-            marks={
-                0: "never",
-                1: 'once or twice a season',
-                2: 'less than once a month',
-                3: 'every week',
-                4: 'every day'
-            },
-            value=0,
-            className='slider1')
+            dcc.RadioItems(
+                options=[
+                    {'label': 'Never', 'value': 'Never'},
+                    {'label': 'Once or twice a season', 'value': 'Once or twice a season'},
+                    {'label': 'Less than once a month', 'value': 'Less than once a month'},
+                    {'label': 'Every week', 'value': 'Every week'},
+                    {'label': 'Every day', 'value': 'Every day'}
+                ],
+                inputStyle={"margin-right": "10px"},
+                value='',
+                #id = 'Q21'
+            )
         ], style={'font-size': '15px', 'marginLeft' : '30px'}),
         html.Br(),
     ]),
