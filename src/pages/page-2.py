@@ -13,7 +13,7 @@ layout = html.Div([
     html.Br(),
     html.Hr(className='orange_line'),
     html.Br(),
-    html.B('Tell us more about your house', style={'text-align' : 'center', 'font-size' : '40px'}, className='center'),
+    html.H1('Tell us more about your house', style={'textAlign' : 'center'}),
     html.Br(),
     html.Br(),
     html.Br(),
@@ -322,8 +322,7 @@ layout = html.Div([
     ]),
     ######
     ######
-    html.Hr(style={'borderWidth': "0.3vh", "width": "100%", "color": "grey"}),
-    #######
+    html.Hr(className='grey_blue_line'),
     #######
     html.P("If you have a courtyard, a garden, or a wooded area, How frequently do you implement the following practices on the property of your principal residence?", style={'font-size': '20px'}),
     html.Div([
