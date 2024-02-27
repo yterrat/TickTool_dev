@@ -41,7 +41,7 @@ layout = html.Div([
     ######
     ######
     html.P("How confident are you that you could find a young tick (nymph, pictured) on your clothes or skin?",className='question_style2'),
-    html.Img(src='/assets/tick1.jpg', style={'width': '80vw', 'height': 'auto'}),
+    html.Img(src='/assets/tick1.jpg', style={'width': '95vw', 'height': 'auto'}),
     html.Br(),
     html.Br(),
     html.Div([
@@ -66,7 +66,7 @@ layout = html.Div([
     ######
     html.P("How confident are you that you could find a young tick (nymph, pictured) on your clothes or skin?"
            , className= 'question_style2'),
-    html.Img(src='/assets/tick2.jpg', style={'width': '80vw', 'height': 'auto'}),
+    html.Img(src='/assets/tick2.jpg', style={'width': '95vw', 'height': 'auto'}),
     html.Br(),
     html.Br(),
     html.Div([
