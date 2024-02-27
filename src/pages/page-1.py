@@ -11,9 +11,9 @@ dash.register_page(__name__, path='/')
 
 layout = html.Div([
     html.Div([
-        html.Img(src='/assets/TickTOOL_logo.png', style={'height': '30%', 'width' : '20%', 'top': 0, 'left': 0, 'display': 'inline-block'}),
-        html.Img(src='/assets/UdeM.png', style={'height': '30%', 'width' : '20%', 'top': 0, 'right': 0, 'display': 'inline-block'})
-    ], style={'position': 'relative'}),
+        html.Img(src='/assets/TickTOOL_logo.png', style={'height': '30%', 'width' : '20%', 'float': 'left', 'display': 'inline-block'}),
+        html.Img(src='/assets/UdeM.png', style={'height': '25%', 'width' : '15%', 'float' : 'right', 'display': 'inline-block'})
+    ]),
     html.Br(),
     html.Br(),
     #html.Img(src='/assets/TickTOOL_logo.png', className='image-gallery'),
@@ -53,6 +53,7 @@ layout = html.Div([
         ),
     html.Br(),
     dcc.Link('Next page', href='/page-2', style={'font-size': '20px'}),
+    html.Br(),
     html.Br(),
 ])
 

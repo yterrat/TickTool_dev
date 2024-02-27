@@ -226,6 +226,7 @@ layout = html.Div([
     ######
     ######
     html.Br(),
+    html.Br(),
     dcc.Link('Next page', href='/page-5'),
     html.Br(),
     html.Br(),

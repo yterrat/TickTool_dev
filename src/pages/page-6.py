@@ -18,7 +18,7 @@ layout = html.Div([
     ######
     html.H1('Secondary residence questions', style={'text-align' : 'center'}),
     html.Br(),
-    html.Hr(className='grey_blue_line'),
+    html.Br(),
     html.P("If you previously indicated that you have a secondary residence. \
            Are you willing to answer questions about tick exposure and preventive practices at your secondary residence?"
            , className='question_style2'),
@@ -387,8 +387,6 @@ layout = html.Div([
     html.Br(),
     html.Br(), 
     html.Label(id= 'data_display', children = ''),
-    html.Br(),
-    html.Br(),
     dcc.Link('Next page', href='/page-7'),
     html.Br(),
     html.Br(),
