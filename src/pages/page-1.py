@@ -10,7 +10,7 @@ import dash_bootstrap_components as dbc
 dash.register_page(__name__, path='/')
 
 layout = html.Div([
-    html.Img(src='/assets/TickTOOL_logo.png', style={'width': '46%', 'height': '60%'}, className='center'),
+    html.Img(src='/assets/TickTOOL_logo.png', style={'width': '46%', 'height': '60%'}, className='image-gallery'),
     html.Br(),
     html.Hr(className='orange_line'),
     html.Br(),
@@ -49,7 +49,7 @@ layout = html.Div([
     dcc.Link('Next page', href='/page-2', style={'font-size': '20px'}),
     html.Br(),
     html.Br(),
-    html.Img(src='/assets/UdeM.png', style={'width': '30%', 'height': '30%'}, className='center'),
+    html.Img(src='/assets/UdeM.png', style={'width': '30%', 'height': '30%'}, className='image-gallery'),
     html.Br(())
 ])
 
