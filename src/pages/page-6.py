@@ -8,7 +8,9 @@ import dash_bootstrap_components as dbc
 dash.register_page(__name__, path='/page-6')
 
 layout = html.Div([
-    html.Img(src='/assets/TickTOOL_logo.png', style={'width': '25%', 'height': '15%', 'padding-left' : '5%'}),
+    html.Img(src='/assets/TickTOOL_logo.png', style={'width': '40%', 'height': '40%'}, className='image-gallery'),
+    html.Hr(className='orange_line'),
+    html.Br(),
     ######
     ######
     # Q17
@@ -16,7 +18,7 @@ layout = html.Div([
     ######
     html.H1('Secondary residence questions', style={'text-align' : 'center'}),
     html.Br(),
-    html.Hr(className='grey_line'),
+    html.Hr(className='grey_blue_line'),
     html.P("If you previously indicated that you have a secondary residence. \
            Are you willing to answer questions about tick exposure and preventive practices at your secondary residence?"
            , className='question_style2'),
@@ -32,9 +34,9 @@ layout = html.Div([
             id = 'Q777'
         )
     ], style={'font-size': '15px', 'marginLeft' : '30px', 'marginRight' : '30px'}),
-    html.Hr(className='grey_line'),
+    html.Hr(className='grey_blue_line'),
     # La suite va être affichée si Yes à cette réponse
-     html.Div(
+    html.Div(
         id='garden',
         children=[
             ######
@@ -42,10 +44,10 @@ layout = html.Div([
             # Q18
             ######
             ######
-            html.P("Please answer the following questions about your secondary residence?", className='question_style2'),
+            html.P("Please answer the following questions about your secondary residence", className='question_style2'),
             html.Div([
                 html.Div([
-                    html.B('Do you live in close proximity (within 500 feet or 150 meters) to a wooded area?)'),
+                    html.Label('Do you live in close proximity (within 500 feet or 150 meters) to a wooded area?)', style={'font-size' : '20px'}),
                     html.Br(),
                     html.Br(),
                     dcc.RadioItems(
@@ -58,7 +60,7 @@ layout = html.Div([
                         id= 'Q1234'
                     ),
                     html.Br(),
-                    html.B('Do you have a courtyard, a garden, or a wooded area?'),
+                    html.Label('Do you have a courtyard, a garden, or a wooded area?', style={'font-size' : '20px'}),
                     html.Br(),
                     html.Br(),
                     dcc.RadioItems(
@@ -71,7 +73,7 @@ layout = html.Div([
                         id= 'Q12345'
                     ),
                     html.Br(),
-                    html.B('Are you aware of, or do you suspect, the presence of deer or rodents on your property?'),
+                    html.Label('Are you aware of, or do you suspect, the presence of deer or rodents on your property?', style={'font-size' : '20px'}),
                     html.Br(),
                     html.Br(),
                     dcc.RadioItems(
@@ -86,7 +88,7 @@ layout = html.Div([
                     html.Br(),
                 ], style={'font-size': '15px', 'marginLeft' : '30px', 'marginRight' : '30px'}),
             ]),
-            html.Hr(className='grey_line'),
+            html.Hr(className='grey_blue_line'),
             ######
             ######
             # Q19
@@ -97,7 +99,7 @@ layout = html.Div([
             ),
             html.Div([
                 html.Div([
-                    html.B('Herbaceous or forested areas/edges'),
+                    html.Label('Herbaceous or forested areas/edges', style={'font-size' : '20px'}),
                     html.Br(),
                     html.Br(),
                     dcc.RadioItems(
@@ -112,7 +114,7 @@ layout = html.Div([
                 ], style={'font-size': '15px', 'marginLeft' : '30px'}),
                 html.Br(),
                 html.Div([
-                    html.B('Children’s play equipment or activity structures'),
+                    html.Label('Children’s play equipment or activity structures', style={'font-size' : '20px'}),
                     html.Br(),
                     html.Br(),
                     dcc.RadioItems(
@@ -127,7 +129,7 @@ layout = html.Div([
                 ], style={'font-size': '15px', 'marginLeft' : '30px'}),
                 html.Br(),
                 html.Div([
-                    html.B('Fenced in area(s) for recreational use'),
+                    html.Label('Fenced in area(s) for recreational use', style={'font-size' : '20px'}),
                     html.Br(),
                     html.Br(),
                     dcc.RadioItems(
@@ -142,7 +144,7 @@ layout = html.Div([
                 ], style={'font-size': '15px', 'marginLeft' : '30px'}),
                 html.Br(),
                 html.Div([
-                    html.B('v.	A corridor/border of wood chips or gravel between the yard and surrounding woods and brush'),
+                    html.Label('A corridor/border of wood chips or gravel between the yard and surrounding woods and brush', style={'font-size' : '20px'}),
                     html.Br(),
                     html.Br(),
                     dcc.RadioItems(
@@ -161,13 +163,13 @@ layout = html.Div([
             # Q20
             ######
             ######
-            html.Hr(className='grey_line'),
+            html.Hr(className='grey_blue_line'),
             html.P('How frequently do you implement the following practices on the property of your secondary residence?',
                 className='question_style2'
             ),
             html.Div([
                 html.Div([
-                    html.B('Regular lawn maintenance including mowing '),
+                    html.Label('Regular lawn maintenance including mowing', style={'font-size' : '20px'}),
                     html.Br(),
                     html.Br(),
                     dcc.RadioItems(
@@ -185,7 +187,7 @@ layout = html.Div([
                 ], style={'font-size': '15px', 'marginLeft' : '30px'}),
                 html.Br(),
                 html.Div([
-                    html.B('Removing fallen leaves '),
+                    html.Label('Removing fallen leaves ', style={'font-size' : '20px'}),
                     html.Br(),
                     html.Br(),
                     dcc.RadioItems(
@@ -203,7 +205,7 @@ layout = html.Div([
                 ], style={'font-size': '15px', 'marginLeft' : '30px'}),
                 html.Br(),
                 html.Div([
-                    html.B('Clearing herbaceous brush and trimming branches '),
+                    html.Label('Clearing herbaceous brush and trimming branches', style={'font-size' : '20px'}),
                     html.Br(),
                     html.Br(),
                     dcc.RadioItems(
@@ -226,13 +228,13 @@ layout = html.Div([
             # Q21
             ######
             ######
-            html.Hr(className='grey_line'),
+            html.Hr(className='grey_blue_line'),
             html.P('In the last 12 months, how frequently did you find ticks in the following contexts when living in your secondary residence?',
                 className='question_style2'
             ),
             html.Div([
                 html.Div([
-                    html.B('Attached to your skin'),
+                    html.Label('Attached to your skin', style={'font-size' : '20px'}),
                     html.Br(),
                     html.Br(),
                     dcc.RadioItems(
@@ -250,7 +252,7 @@ layout = html.Div([
                 ], style={'font-size': '15px', 'marginLeft' : '30px'}),
                 html.Br(),
                 html.Div([
-                    html.B('Freely moving on your skin or clothing'),
+                    html.Label('Freely moving on your skin or clothing', style={'font-size' : '20px'}),
                     html.Br(),
                     html.Br(),
                     dcc.RadioItems(
@@ -268,7 +270,7 @@ layout = html.Div([
                 ], style={'font-size': '15px', 'marginLeft' : '30px'}),
                 html.Br(),
                 html.Div([
-                    html.B('On a pet'),
+                    html.Label('On a pet', style={'font-size' : '20px'}),
                     html.Br(),
                     html.Br(),
                     dcc.RadioItems(
@@ -286,7 +288,7 @@ layout = html.Div([
                 ], style={'font-size': '15px', 'marginLeft' : '30px'}),
                 html.Br(),
                 html.Div([
-                    html.B('In the environment'),
+                    html.Label('In the environment', style={'font-size' : '20px'}),
                     html.Br(),
                     html.Br(),
                     dcc.RadioItems(
@@ -303,97 +305,94 @@ layout = html.Div([
                     ),
                 ], style={'font-size': '15px', 'marginLeft' : '30px'})
             ]),
-            html.Hr(className='grey_line'),
+            html.Hr(className='grey_blue_line'),
             html.P('When living in your secondary residence, approximately how many ticks did you find \
                     in the following contexts last year, between the months of April and November?', className='question_style2'),
             html.Div([
-                    html.B('Attached your skin'),
+                    html.Label('Attached your skin', style={'font-size' : '20px'}),
                     html.Br(),
                     html.Br(),
-                    dcc.Slider(0, 6,
-                    step = 1,
-                    marks={
-                        0: "I don't remmber",
-                        1: 'Not applicable',
-                        2: '0',
-                        3: '1-25',
-                        4: '25-50',
-                        5: '51-75',
-                        6: '76-100 '
-                    },
-                    value=0,
-                    className='slider1'
+                    dcc.RadioItems(
+                        options=[
+                            {'label': "I don't remmber", 'value': "I don't remmber"},
+                            {'label': "0", 'value': "0"},
+                            {'label': "1-25", 'value': "1-25"},
+                            {'label': "26-50", 'value': "26-50"},
+                            {'label': "51-75", 'value': "51-75"},
+                            {'label': "76-100", 'value': "76-100"}
+                        ],
+                        inputStyle={"margin-right": "10px"},
+                        value='',
+                        #id = 'QXXX'
                     ),
                     html.Br(),
-                    html.B('Freely moving on your skin or cloth'),
+                    html.Label('Freely moving on your skin or cloth', style={'font-size' : '20px'}),
                     html.Br(),
                     html.Br(),
-                    dcc.Slider(0, 6,
-                    step = 1,
-                    marks={
-                        0: "I don't remmber",
-                        1: 'Not applicable',
-                        2: '0',
-                        3: '1-25',
-                        4: '25-50',
-                        5: '51-75',
-                        6: '76-100 '
-                    },
-                    value=0,
-                    className='slider1'
+                    dcc.RadioItems(
+                        options=[
+                            {'label': "I don't remmber", 'value': "I don't remmber"},
+                            {'label': "0", 'value': "0"},
+                            {'label': "1-25", 'value': "1-25"},
+                            {'label': "26-50", 'value': "26-50"},
+                            {'label': "51-75", 'value': "51-75"},
+                            {'label': "76-100", 'value': "76-100"}
+                        ],
+                        inputStyle={"margin-right": "10px"},
+                        value='',
+                        #id = 'QXXX'
                     ),
                     html.Br(),
-                    html.B('On a pet'),
+                    html.Label('On a pet', style={'font-size' : '20px'}),
                     html.Br(),
                     html.Br(),
-                    dcc.Slider(0, 6,
-                    step = 1,
-                    marks={
-                        0: "I don't remmber",
-                        1: 'Not applicable',
-                        2: '0',
-                        3: '1-25',
-                        4: '25-50',
-                        5: '51-75',
-                        6: '76-100 '
-                    },
-                    value=0,
-                    className='slider1'
+                    dcc.RadioItems(
+                        options=[
+                            {'label': "I don't remmber", 'value': "I don't remmber"},
+                            {'label': "0", 'value': "0"},
+                            {'label': "1-25", 'value': "1-25"},
+                            {'label': "26-50", 'value': "26-50"},
+                            {'label': "51-75", 'value': "51-75"},
+                            {'label': "76-100", 'value': "76-100"}
+                        ],
+                        inputStyle={"margin-right": "10px"},
+                        value='',
+                        #id = 'QXXX'
                     ),
                     html.Br(),
-                    html.B('In the environment (e.g., yard, house or park)'),
+                    html.Label('In the environment (e.g., yard, house or park)', style={'font-size' : '20px'}),
                     html.Br(),
                     html.Br(),
-                    dcc.Slider(0, 6,
-                    step = 1,
-                    marks={
-                        0: "I don't remmber",
-                        1: 'Not applicable',
-                        2: '0',
-                        3: '1-25',
-                        4: '25-50',
-                        5: '51-75',
-                        6: '76-100 '
-                    },
-                    value=0,
-                    className='slider1')
+                    dcc.RadioItems(
+                        options=[
+                            {'label': "I don't remmber", 'value': "I don't remmber"},
+                            {'label': "0", 'value': "0"},
+                            {'label': "1-25", 'value': "1-25"},
+                            {'label': "26-50", 'value': "26-50"},
+                            {'label': "51-75", 'value': "51-75"},
+                            {'label': "76-100", 'value': "76-100"}
+                        ],
+                        inputStyle={"margin-right": "10px"},
+                        value='',
+                        #id = 'QXXX'
+                    ),
                     ######
                     #replace by 1-4, 5-9, 10 or more categories, remove not applicable
                     ######
                 ], style={'font-size': '15px', 'marginLeft' : '30px'}
-            ),
+            )
         ],
         style= {'display': 'block'}
     ),    
     html.Br(),
     html.Br(), 
-    html.B(id= 'data_display', children = ''),
+    html.Label(id= 'data_display', children = ''),
     html.Br(),
     html.Br(),
     dcc.Link('Next page', href='/page-7'),
     html.Br(),
     html.Br(),
-    dbc.Progress(value=77, style={"height": "15px"}, className="mb-3", label = "% done"),
+    dbc.Progress(value=77, style={"height": "15px"}, className="mb-3", label = "66% done")
 ])
 
 

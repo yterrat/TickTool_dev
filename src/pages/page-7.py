@@ -6,25 +6,20 @@ from dash import Dash, dcc, html, Input, Output, callback, State
 import dash_bootstrap_components as dbc
 
 
-
-
 dash.register_page(__name__, path='/page-7')
 
-
-#Centered questions and text
-
-
 layout = html.Div([
-    html.Img(src='/assets/TickTOOL_logo.png', style={'width': '25%', 'height': '15%', 'padding-left' : '5%'}),
-    html.H1('Tell us about your self confidence'),
-    html.Hr(className='grey_line'),
+    html.Img(src='/assets/TickTOOL_logo.png', style={'width': '40%', 'height': '40%'}, className='image-gallery'),
+    html.Hr(className='orange_line'),
+    html.Br(),
+    html.H1('Tell us about your self confidence',style={'text-align' : 'center'}),
     ######
     ######
     # Q23
     ######
     ######
     html.Br(),
-    html.P("How confident are you that you can prevent a tick bite?"),
+    html.P("How confident are you that you can prevent a tick bite?", className='question_style2'),
     html.Br(),
     html.Div([
         dcc.RadioItems(
@@ -39,17 +34,15 @@ layout = html.Div([
             value='',
             #id = 'QXXX'
         )
-    ], style={'font-size': '15px', 'margin-left': '47%'}),
-    html.Hr(className='grey_line'),
+    ], style={'font-size': '15px',  'marginLeft' : '30px'}),
+    html.Hr(className='grey_blue_line'),
     ######
     ######
     # Q24
     ######
     ######
-    html.Br(),
-    html.P("How confident are you that you could find a young tick (nymph, pictured) on your clothes or skin?"
-           , className= 'question_style_centered'),
-    html.Img(src='/assets/tick1.jpg', style={'width': '30%', 'height': '10%'}, className='center'),
+    html.P("How confident are you that you could find a young tick (nymph, pictured) on your clothes or skin?",className='question_style2'),
+    html.Img(src='/assets/tick1.jpg', style={'width': '30%', 'height': '10%'}),
     html.Br(),
     html.Br(),
     html.Div([
@@ -61,22 +54,20 @@ layout = html.Div([
                 {'label': "Very", 'value': "Very"},
                 {'label': "Extremely", 'value': "Extremely"}
             ],
-            inputStyle={"margin-right": "10px", 'margin-left': '47%'},
+            inputStyle={"margin-right": "10px"},
             value='',
             #id = 'QXXX'
         )
-    ], style={'font-size': '15px'}),
-    html.Hr(className='grey_line'),
+    ], style={'font-size': '15px',  'marginLeft' : '30px'}),
+    html.Hr(className='grey_blue_line'),
     ######
     ######
     # Q25
     ######
     ######
-    html.Br(),
     html.P("How confident are you that you could find a young tick (nymph, pictured) on your clothes or skin?"
-           , className= 'question_style_centered'),
-    html.Br(),
-    html.Img(src='/assets/tick2.jpg', style={'width': '30%', 'height': '10%'}, className='center'),
+           , className= 'question_style2'),
+    html.Img(src='/assets/tick2.jpg', style={'width': '30%', 'height': '10%'}),
     html.Br(),
     html.Br(),
     html.Div([
@@ -88,21 +79,19 @@ layout = html.Div([
                 {'label': "Very", 'value': "Very"},
                 {'label': "Extremely", 'value': "Extremely"}
             ],
-            inputStyle={"margin-right": "10px", 'margin-left': '47%'},
+            inputStyle={"margin-right": "10px"},
             value='',
             #id = 'QXXX'
         )
-    ], style={'font-size': '15px'}),
-    html.Hr(className='grey_line'),
+    ], style={'font-size': '15px',  'marginLeft' : '30px'}),
+    html.Hr(className='grey_blue_line'),
     ######
     ######
     # Q26
     ######
     ######
-
-    html.Br(),
     html.P("How confident are you that you could safely and effectively remove a tick which had embedded into the skin?"
-           , className= 'question_style_centered'),
+           , className= 'question_style2'),
     html.Br(),
     html.Div([
         dcc.RadioItems(
@@ -113,11 +102,11 @@ layout = html.Div([
                 {'label': "Very", 'value': "Very"},
                 {'label': "Extremely", 'value': "Extremely"}
             ],
-            inputStyle={"margin-right": "10px", 'margin-left': '47%'},
+            inputStyle={"margin-right": "10px"},
             value='',
             #id = 'QXXX'
         )
-    ], style={'font-size': '15px'}),
+    ], style={'font-size': '15px',  'marginLeft' : '30px'}),
     html.Br(),
     html.Br(),
     dcc.Link('Next page', href='/page-8'),

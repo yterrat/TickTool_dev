@@ -8,7 +8,9 @@ import dash_bootstrap_components as dbc
 dash.register_page(__name__, path='/page-4')
 
 layout = html.Div([
-    html.Img(src='/assets/TickTOOL_logo.png', style={'width': '25%', 'height': '15%', 'padding-left' : '5%'}),
+    html.Img(src='/assets/TickTOOL_logo.png', style={'width': '40%', 'height': '40%'}, className='image-gallery'),
+    html.Hr(className='orange_line'),
+    html.Br(),
     html.H1('How are you protecting yourself ?', style={'text-align' : 'center'}),
     html.Br(),
     # Q12
@@ -26,7 +28,7 @@ layout = html.Div([
                 id = 'Q28'
             ),
         ], style={'font-size': '15px', 'marginLeft' : '30px'}),
-    html.Hr(style={'borderWidth': "0.3vh", "width": "100%", "color": "grey"}),
+    html.Hr(className='grey_blue_line'),
     html.Br(),
     # Q13
     html.P("If you answered yes to the previous question, \
@@ -43,7 +45,7 @@ layout = html.Div([
                 id = 'Q29'
             ),
         ], style={'font-size': '15px', 'marginLeft' : '30px'}),
-    html.Hr(style={'borderWidth': "0.3vh", "width": "100%", "color": "grey"}),
+    html.Hr(className='grey_blue_line'),
     html.Br(),
     #######
     #######
@@ -51,7 +53,7 @@ layout = html.Div([
     html.P("When visiting or living in these areas, how frequently did you adopt the following measures to protect yourself against tick bites and Lyme disease? ", className='question_style2'),
     html.Div([
         html.Div([
-            html.B('Wearing long layers of clothing (e.g., pants, long sleeves)'),
+            html.Label('Wearing long layers of clothing (e.g., pants, long sleeves)', style={'font-size' : '20px'}),
             html.Br(),
             html.Br(),
             dcc.RadioItems(
@@ -70,7 +72,7 @@ layout = html.Div([
         ], style={'font-size': '15px', 'marginLeft' : '30px'}),
         html.Br(),
         html.Div([
-            html.B('Tucking in clothes when practicing outdoor activities)'),
+            html.Label('Tucking in clothes when practicing outdoor activities)', style={'font-size' : '20px'}),
             html.Br(),
             html.Br(),
             dcc.RadioItems(
@@ -89,7 +91,7 @@ layout = html.Div([
         ], style={'font-size': '15px', 'marginLeft' : '30px'}),
         html.Br(),
         html.Div([
-            html.B('Applying bug repellent containing DEET or icaridin (also known as picaridin) when outdoors )'),
+            html.Label('Applying bug repellent containing DEET or icaridin (also known as picaridin) when outdoors )', style={'font-size' : '20px'}),
             html.Br(),
             html.Br(),
             dcc.RadioItems(
@@ -108,7 +110,7 @@ layout = html.Div([
         ], style={'font-size': '15px', 'marginLeft' : '30px'}),
         html.Br(),
         html.Div([
-            html.B('Walking on cleared paths and trails and avoiding tall grass during outdoor activities'),
+            html.Label('Walking on cleared paths and trails and avoiding tall grass during outdoor activities', style={'font-size' : '20px'}),
             html.Br(),
             html.Br(),
             dcc.RadioItems(
@@ -127,7 +129,7 @@ layout = html.Div([
         ], style={'font-size': '15px', 'marginLeft' : '30px'}),
         html.Br(),
         html.Div([
-            html.B('Wearing light-coloured clothing to make it easier to check for ticks during outdoor activities'),
+            html.Label('Wearing light-coloured clothing to make it easier to check for ticks during outdoor activities', style={'font-size' : '20px'}),
             html.Br(),
             html.Br(),
             dcc.RadioItems(
@@ -146,7 +148,7 @@ layout = html.Div([
         ], style={'font-size': '15px', 'marginLeft' : '30px'}),
         html.Br(),
         html.Div([
-            html.B('Bathing or showering after spending time outdoors'),
+            html.Label('Bathing or showering after spending time outdoors', style={'font-size' : '20px'}),
             html.Br(),
             html.Br(),
             dcc.RadioItems(
@@ -165,7 +167,7 @@ layout = html.Div([
         ], style={'font-size': '15px', 'marginLeft' : '30px'}),
         html.Br(),
         html.Div([
-            html.B('Examining your body for ticks and removing them immediately after being outdoors'),
+            html.Label('Examining your body for ticks and removing them immediately after being outdoors', style={'font-size' : '20px'}),
             html.Br(),
             html.Br(),
             dcc.RadioItems(
@@ -184,7 +186,7 @@ layout = html.Div([
         ], style={'font-size': '15px', 'marginLeft' : '30px'}),
         html.Br(),
         html.Div([
-            html.B('Examining clothes and items to avoid bringing ticks into home after being outdoors'),
+            html.Label('Examining clothes and items to avoid bringing ticks into home after being outdoors', style={'font-size' : '20px'}),
             html.Br(),
             html.Br(),
             dcc.RadioItems(
@@ -203,7 +205,7 @@ layout = html.Div([
         ], style={'font-size': '15px', 'marginLeft' : '30px'}),
         html.Br(),
         html.Div([
-            html.B('Putting clothes in the dryer for 10 minutes to kill any ticks that may be there after being outdoors'),
+            html.Label('Putting clothes in the dryer for 10 minutes to kill any ticks that may be there after being outdoors', style={'font-size' : '20px'}),
             html.Br(),
             html.Br(),
             dcc.RadioItems(
