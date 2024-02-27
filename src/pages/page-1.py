@@ -10,14 +10,12 @@ import dash_bootstrap_components as dbc
 dash.register_page(__name__, path='/')
 
 layout = html.Div([
-    html.Div([
-        html.Img(src='/assets/TickTOOL_logo.png', style={'width': '25%', 'height': '15%', 'padding-left' : '1%'}),
-        html.Img(src='/assets/UdeM.png', style={'width': '25%', 'height': '15%', 'padding-right':'0%'})],
-        style = {'display' : 'inline-block'}
-    ),
-
-    html.H1('Are you adapting to ticks ?',style={'text-align' : 'center'}),
-    html.Hr(style={'borderWidth': "0.3vh", "width": "100%", "color": "grey"}),
+    html.Img(src='/assets/TickTOOL_logo.png', style={'width': '40%', 'height': '40%'}, className='center'),
+    html.Br(),
+    html.Hr(className='orange_line'),
+    html.Br(),
+    html.B('Are you adapting to ticks ?', style={'text-align' : 'center', 'font-size' : '40px'}, className='center'),
+    #html.H1('Are you adapting to ticks ?',style={'text-align' : 'center'}),
     html.Br(),
     html.Br(),
     html.P("Would you like to better understand your risk of tick exposure or learn how to improve \
@@ -38,15 +36,14 @@ layout = html.Div([
             ],
             id = 'consent',
             value='',
-            #inputStyle={"marginRight": "20px"},
-            #style={'font-size': '15px', 'marginLeft' : '30px', 'marginRight' : '30px','text-align' : 'center'},
-            labelStyle={'display': 'inline-block', 'margin-right': '20px'},
-            style={'textAlign': 'center'}
+            labelStyle={'display': 'inline-block', 'margin-right': '20px'}
         ),
     html.Br(),
-    dcc.Link('Next page', href='/page-2'),
+    dcc.Link('Next page', href='/page-2', style={'font-size': '20px'}),
     html.Br(),
     html.Br(),
+    html.Img(src='/assets/UdeM.png', style={'width': '30%', 'height': '30%'}, className='center'),
+    html.Br(())
 ])
 
 

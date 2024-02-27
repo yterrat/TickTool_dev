@@ -6,6 +6,13 @@
     font-size: 20px;
 }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 .question_style_centered {
   font-size: 20px;
   text-align: center;
@@ -25,17 +32,17 @@
 }
 
 .grey_blue_line {
-  border-width: 1.1vh;
+  border-width: 0.4vh;
   width: 100%;
   border-color:#0A4158;
-  opacity: 0.9;
+  opacity: 0.3;
 }
 
 .green_line {
-  border-width: 1.1vh;
+  border-width: 0.7vh;
   width: 100%;
   border-color: #8BC869;
-  opacity: 0.9;
+  opacity: 0.6;
 }
 
 .rc-slider-track {

@@ -228,8 +228,7 @@ layout = html.Div([
     html.Br(),
     html.Br(),
     dbc.Progress(value=50, style={"height": "15px"}, className="mb-3", label = "50% done"),
-], style={'border': '4px solid black', 'padding': '20px', 'border-radius' : '15px'}
-)
+])
 
 
 # @callback(
