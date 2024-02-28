@@ -34,16 +34,18 @@ layout = html.Div([
     html.B("Do you consent to sharing your responses with the University of Montreal?", style={'font-size': '20px'}),
     html.Br(),
     html.Br(),
-    dcc.RadioItems(
-            options=[
-                {'label': 'Yes', 'value': 'yes'},
-                {'label': 'No', 'value': 'no'}
-            ],
-            id = 'consent',
-            value='',
-            inputStyle={"margin-right": "10px"},
-            labelStyle={'display': 'inline-block', 'margin-right': '15px'}
-        ),
+    html.Div([
+        dcc.RadioItems(
+                options=[
+                    {'label': 'Yes', 'value': 'yes'},
+                    {'label': 'No', 'value': 'no'}
+                ],
+                id = 'consent',
+                value='',
+                inputStyle={"margin-right": "10px"},
+                labelStyle={'display': 'inline-block', 'margin-right': '15px'}
+            )], className='center'
+    ),
     html.Br(),
     dcc.Link('Next page', href='/page-2', style={'font-size': '20px'}),
     html.Br(),

@@ -20,7 +20,7 @@ layout = html.Div([
     html.Br(),
     html.Br(),
     html.P("In the last 12 months, how frequently did you find ticks in the following contexts \
-           when living in your principal residence?? ", className='question_style2'),
+           when living in your principal residence? ", className='question_style2'),
     html.Br(),
     html.Div([
         html.Div([
@@ -113,7 +113,7 @@ layout = html.Div([
             html.Br(),
             dcc.RadioItems(
                 options=[
-                    {'label': "I don't remmber", 'value': "I don't remmber"},
+                    {'label': "I don't remember", 'value': "I don't remmber"},
                     {'label': "0", 'value': "0"},
                     {'label': "1-25", 'value': "1-25"},
                     {'label': "26-50", 'value': "26-50"},
@@ -130,7 +130,7 @@ layout = html.Div([
             html.Br(),
             dcc.RadioItems(
                 options=[
-                    {'label': "I don't remmber", 'value': "I don't remmber"},
+                    {'label': "I don't remember", 'value': "I don't remmber"},
                     {'label': "0", 'value': "0"},
                     {'label': "1-25", 'value': "1-25"},
                     {'label': "26-50", 'value': "26-50"},
@@ -147,7 +147,7 @@ layout = html.Div([
             html.Br(),
             dcc.RadioItems(
                 options=[
-                    {'label': "I don't remmber", 'value': "I don't remmber"},
+                    {'label': "I don't remember", 'value': "I don't remmber"},
                     {'label': "0", 'value': "0"},
                     {'label': "1-25", 'value': "1-25"},
                     {'label': "26-50", 'value': "26-50"},
@@ -164,7 +164,7 @@ layout = html.Div([
             html.Br(),
             dcc.RadioItems(
                 options=[
-                    {'label': "I don't remmber", 'value': "I don't remmber"},
+                    {'label': "I don't remember", 'value': "I don't remmber"},
                     {'label': "0", 'value': "0"},
                     {'label': "1-25", 'value': "1-25"},
                     {'label': "26-50", 'value': "26-50"},

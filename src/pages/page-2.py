@@ -122,66 +122,76 @@ layout = html.Div([
         ),style={'font-size': '15px', 'marginLeft' : '30px'}
     ),
     #######
-    html.Hr(className='grey_blue_line'),
-    html.P("If yes to dogs: Have you used either of the following for your dog(s) in the last 12 months?",
-           style={'font-size': '20px'}
-           ),
-    html.Div([
-        html.Div([
-            html.Label('Anti-tick products, as recommended by your veterinarian', style={'font-size': '20px'}),
-            html.Br(),
-            html.Br(),
-            dcc.RadioItems(
-                options=[
-                    {'label': 'Yes', 'value': 'yes'},
-                    {'label': 'No', 'value': 'no'},
-                    {'label': "I don't know", 'value': "I don't know"},
-                    {'label': 'I prefer not to say', 'value': 'prefer_not_to_say'}
-                ],
-                inputStyle={"margin-right": "10px"},
-                value='',
-                id = 'Q7'
-            ),
-        ], style={'font-size': '15px', 'marginLeft' : '30px'}),
-        html.Br(),
-        html.Div([
-            html.Label('Lyme disease vaccine', style={'font-size': '20px'}),
-            html.Br(),
-            html.Br(),
-            dcc.RadioItems(
-                options=[
-                    {'label': 'Yes', 'value': 'yes'},
-                    {'label': 'No', 'value': 'no'},
-                    {'label': "I don't know", 'value': "I don't know"},
-                    {'label': 'I prefer not to say', 'value': 'prefer_not_to_say'}
-                ],
-                value='',
-                inputStyle={"margin-right": "10px"},
-                id = 'Q8'
-            ),
-        ], 
-        style={'font-size': '15px', 'marginLeft' : '30px'})
-    ]),
+    html.Div(
+        id='dogs',
+        children=[
+            html.Hr(className='grey_blue_line'),
+            html.P("Have you used either of the following for your dog(s) in the last 12 months?",
+                style={'font-size': '20px'}
+                ),
+            html.Div([
+                html.Div([
+                    html.Label('Anti-tick products, as recommended by your veterinarian', style={'font-size': '20px'}),
+                    html.Br(),
+                    html.Br(),
+                    dcc.RadioItems(
+                        options=[
+                            {'label': 'Yes', 'value': 'yes'},
+                            {'label': 'No', 'value': 'no'},
+                            {'label': "I don't know", 'value': "I don't know"},
+                            {'label': 'I prefer not to say', 'value': 'prefer_not_to_say'}
+                        ],
+                        inputStyle={"margin-right": "10px"},
+                        value='',
+                        id = 'Q7'
+                    ),
+                ], style={'font-size': '15px', 'marginLeft' : '30px'}),
+                html.Br(),
+                html.Div([
+                    html.Label('Lyme disease vaccine', style={'font-size': '20px'}),
+                    html.Br(),
+                    html.Br(),
+                    dcc.RadioItems(
+                        options=[
+                            {'label': 'Yes', 'value': 'yes'},
+                            {'label': 'No', 'value': 'no'},
+                            {'label': "I don't know", 'value': "I don't know"},
+                            {'label': 'I prefer not to say', 'value': 'prefer_not_to_say'}
+                        ],
+                        value='',
+                        inputStyle={"margin-right": "10px"},
+                        id = 'Q8'
+                    ),
+                ], 
+                style={'font-size': '15px', 'marginLeft' : '30px'})
+            ]),
+        ], style={'display' : 'block'}
+    ),
     ######
-    html.Hr(className='grey_blue_line'),
-    html.P("If yes to cats: Have you used anti-tick products, as recommended by your veterinarian, for your cat(s) in the last 12 months? ",
-           style={'font-size': '20px'}
-           ),
-    dcc.RadioItems(
-            options=[
-                {'label': 'Yes', 'value': 'yes'},
-                {'label': 'No', 'value': 'no'},
-                {'label': "I don't know", 'value': "I don't know"},
-                {'label': 'I prefer not to say', 'value': 'prefer_not_to_say'}
-            ],
-            inputStyle={"margin-right": "10px"},
-            value='',
-            style={'font-size': '15px', 'marginLeft' : '30px'},
-            id = 'Q9'
-        ), 
-    html.Hr(className='grey_blue_line'),
+    html.Div(
+        id='cats',
+        children=[
+        html.Hr(className='grey_blue_line'),
+        html.P("Have you used anti-tick products, as recommended by your veterinarian, for your cat(s) in the last 12 months? ",
+            style={'font-size': '20px'}
+            ),
+        dcc.RadioItems(
+                options=[
+                    {'label': 'Yes', 'value': 'yes'},
+                    {'label': 'No', 'value': 'no'},
+                    {'label': "I don't know", 'value': "I don't know"},
+                    {'label': 'I prefer not to say', 'value': 'prefer_not_to_say'}
+                ],
+                inputStyle={"margin-right": "10px"},
+                value='',
+                style={'font-size': '15px', 'marginLeft' : '30px'},
+                id = 'Q9'
+            ), 
+        ], style={'display':'block'}
+    ),
     #######
     #######
+    html.Hr(className='grey_blue_line'),
     html.P("Please answer the following questions about your principal residence:", style={'font-size': '20px'}),
     html.Div([
         html.Div([
@@ -232,152 +242,155 @@ layout = html.Div([
             ),
         ], style={'font-size': '15px', 'marginLeft' : '30px'}),
     ]),
-     html.Hr(className='grey_blue_line'),
-    ######
-    ######
-    html.Div([
-        html.P("If you have a courtyard, a garden, or a wooded area, are there any of the following on your principal residencey", style={'font-size': '20px'}),
-        html.Div([
-            html.Label('Herbaceous or forested areas/edges', style={'font-size': '20px'}),
-            html.Br(),
-            html.Br(),
-            dcc.RadioItems(
-                options=[
-                    {'label': 'Yes', 'value': 'yes'},
-                    {'label': 'No', 'value': 'no'},
-                    {'label': "I don't know", 'value': "I don't know"}
-                ],
-                inputStyle={"margin-right": "10px"},
-                value='',
-                id = 'Q13'
-            ),
-        ], style={'font-size': '15px', 'marginLeft' : '30px'}),
-        html.Br(),
-        html.Div([
-            html.Label('Children’s play equipment or activity structures?', style={'font-size': '20px'}),
-            html.Br(),
-            html.Br(),
-            dcc.RadioItems(
-                options=[
-                    {'label': 'Yes', 'value': 'yes'},
-                    {'label': 'No', 'value': 'no'},
-                    {'label': "I don't know", 'value': "I don't know"}
-                ],
-                inputStyle={"margin-right": "10px"},
-                value='',
-                id = 'Q14'
-            ),
-        ], style={'font-size': '15px', 'marginLeft' : '30px'}),
-        html.Br(),
-        html.Div([
-            html.Label('Fenced in area(s) for recreational use?', style={'font-size': '20px'}),
-            html.Br(),
-            html.Br(),
-            dcc.RadioItems(
-                options=[
-                    {'label': 'Yes', 'value': 'yes'},
-                    {'label': 'No', 'value': 'no'},
-                    {'label': "I don't know", 'value': "I don't know"}
-                ],
-                value='',
-                inputStyle={"margin-right": "10px"},
-                id = 'Q15'
-            ),
-        ], style={'font-size': '15px', 'marginLeft' : '30px'}),
-        html.Br(),
-        html.Div([
-            html.Label('Barriers to exclude deer on your property?', style={'font-size': '20px'}),
-            html.Br(),
-            html.Br(),
-            dcc.RadioItems(
-                options=[
-                    {'label': 'Yes', 'value': 'yes'},
-                    {'label': 'No', 'value': 'no'},
-                    {'label': "I don't know", 'value': "I don't know"}
-                ],
-                value='',
-                inputStyle={"margin-right": "10px"},
-                id = 'Q16'
-            ),
-        ], style={'font-size': '15px', 'marginLeft' : '30px'}),
-        html.Br(),
-        html.Div([
-            html.Label('A corridor/border of wood chips or gravel between the yard and surrounding woods and brush?', style={'font-size': '20px'}),
-            html.Br(),
-            html.Br(),
-            dcc.RadioItems(
-                options=[
-                    {'label': 'Yes', 'value': 'yes'},
-                    {'label': 'No', 'value': 'no'},
-                    {'label': "I don't know", 'value': "I don't know"}
-                ],
-                value='',
-                inputStyle={"margin-right": "10px"},
-                id = 'Q17'
-            ),
-        ], style={'font-size': '15px', 'marginLeft' : '30px'}),
-    ]),
-    ######
-    ######
     html.Hr(className='grey_blue_line'),
-    #######
-    html.P("If you have a courtyard, a garden, or a wooded area, How frequently do you implement the following practices on the property of your principal residence?", style={'font-size': '20px'}),
-    html.Div([
-        html.Div([
-            html.Label('Regular lawn maintenance including mowing', style={'font-size': '20px'}),
+    ######
+    ######
+    html.Div(
+        id='courtyard',
+        children=[
+            html.P("Are there any of the following on your principal residencey", style={'font-size': '20px'}),
+            html.Div([
+                html.Label('Herbaceous or forested areas/edges', style={'font-size': '20px'}),
+                html.Br(),
+                html.Br(),
+                dcc.RadioItems(
+                    options=[
+                        {'label': 'Yes', 'value': 'yes'},
+                        {'label': 'No', 'value': 'no'},
+                        {'label': "I don't know", 'value': "I don't know"}
+                    ],
+                    inputStyle={"margin-right": "10px"},
+                    value='',
+                    id = 'Q13'
+                ),
+            ], style={'font-size': '15px', 'marginLeft' : '30px'}),
             html.Br(),
+            html.Div([
+                html.Label('Children’s play equipment or activity structures?', style={'font-size': '20px'}),
+                html.Br(),
+                html.Br(),
+                dcc.RadioItems(
+                    options=[
+                        {'label': 'Yes', 'value': 'yes'},
+                        {'label': 'No', 'value': 'no'},
+                        {'label': "I don't know", 'value': "I don't know"}
+                    ],
+                    inputStyle={"margin-right": "10px"},
+                    value='',
+                    id = 'Q14'
+                ),
+            ], style={'font-size': '15px', 'marginLeft' : '30px'}),
             html.Br(),
-            dcc.RadioItems(
-                options=[
-                    {'label': 'Never', 'value': 'Never'},
-                    {'label': 'rarely', 'value': 'Rarely'},
-                    {'label': "Sometimes", 'value': "Sometimes"},
-                    {'label': 'Most of the time', 'value': 'Most of the time'},
-                    {'label': "Always", 'value': "Always"}
-                ],
-                value='',
-                inputStyle={"margin-right": "10px"},
-                id = 'Q17'
-            ),
-            html.Br()
-        ], style={'font-size': '15px', 'marginLeft' : '30px'}),
-        html.Div([
-            html.Label('Removing fallen leaves', style={'font-size': '20px'}),
+            html.Div([
+                html.Label('Fenced in area(s) for recreational use?', style={'font-size': '20px'}),
+                html.Br(),
+                html.Br(),
+                dcc.RadioItems(
+                    options=[
+                        {'label': 'Yes', 'value': 'yes'},
+                        {'label': 'No', 'value': 'no'},
+                        {'label': "I don't know", 'value': "I don't know"}
+                    ],
+                    value='',
+                    inputStyle={"margin-right": "10px"},
+                    id = 'Q15'
+                ),
+            ], style={'font-size': '15px', 'marginLeft' : '30px'}),
             html.Br(),
+            html.Div([
+                html.Label('Barriers to exclude deer on your property?', style={'font-size': '20px'}),
+                html.Br(),
+                html.Br(),
+                dcc.RadioItems(
+                    options=[
+                        {'label': 'Yes', 'value': 'yes'},
+                        {'label': 'No', 'value': 'no'},
+                        {'label': "I don't know", 'value': "I don't know"}
+                    ],
+                    value='',
+                    inputStyle={"margin-right": "10px"},
+                    id = 'Q16'
+                ),
+            ], style={'font-size': '15px', 'marginLeft' : '30px'}),
             html.Br(),
-            dcc.RadioItems(
-                options=[
-                    {'label': 'Never', 'value': 'Never'},
-                    {'label': 'rarely', 'value': 'Rarely'},
-                    {'label': "Sometimes", 'value': "Sometimes"},
-                    {'label': 'Most of the time', 'value': 'Most of the time'},
-                    {'label': "Always", 'value': "Always"}
-                ],
-                value='',
-                inputStyle={"margin-right": "10px"},
-                id = 'Q18'
-            ),
-            html.Br()
-        ], style={'font-size': '15px', 'marginLeft' : '30px'}),
-        html.Div([
-            html.Label('Clearing herbaceous brush and trimming branches', style={'font-size': '20px'}),
-            html.Br(),
-            html.Br(),
-            dcc.RadioItems(
-                options=[
-                    {'label': 'Never', 'value': 'Never'},
-                    {'label': 'rarely', 'value': 'Rarely'},
-                    {'label': "Sometimes", 'value': "Sometimes"},
-                    {'label': 'Most of the time', 'value': 'Most of the time'},
-                    {'label': "Always", 'value': "Always"}
-                ],
-                value='',
-                inputStyle={"margin-right": "10px"},
-                id = 'Q19'
-            ),
-            html.Br()
-        ], style={'font-size': '15px', 'marginLeft' : '30px'}),
-    ]),
+            html.Div([
+                html.Label('A corridor/border of wood chips or gravel between the yard and surrounding woods and brush?', style={'font-size': '20px'}),
+                html.Br(),
+                html.Br(),
+                dcc.RadioItems(
+                    options=[
+                        {'label': 'Yes', 'value': 'yes'},
+                        {'label': 'No', 'value': 'no'},
+                        {'label': "I don't know", 'value': "I don't know"}
+                    ],
+                    value='',
+                    inputStyle={"margin-right": "10px"},
+                    id = 'Q17'
+                ),
+            ], style={'font-size': '15px', 'marginLeft' : '30px'}),  
+            ######
+            ######
+            html.Hr(className='grey_blue_line'),
+            #######
+            html.P("How frequently do you implement the following practices on the property of your principal residence?", style={'font-size': '20px'}),
+            html.Div([
+                html.Div([
+                    html.Label('Regular lawn maintenance including mowing', style={'font-size': '20px'}),
+                    html.Br(),
+                    html.Br(),
+                    dcc.RadioItems(
+                        options=[
+                            {'label': 'Never', 'value': 'Never'},
+                            {'label': 'rarely', 'value': 'Rarely'},
+                            {'label': "Sometimes", 'value': "Sometimes"},
+                            {'label': 'Most of the time', 'value': 'Most of the time'},
+                            {'label': "Always", 'value': "Always"}
+                        ],
+                        value='',
+                        inputStyle={"margin-right": "10px"},
+                        id = 'Q17'
+                    ),
+                    html.Br()
+                ], style={'font-size': '15px', 'marginLeft' : '30px'}),
+                html.Div([
+                    html.Label('Removing fallen leaves', style={'font-size': '20px'}),
+                    html.Br(),
+                    html.Br(),
+                    dcc.RadioItems(
+                        options=[
+                            {'label': 'Never', 'value': 'Never'},
+                            {'label': 'rarely', 'value': 'Rarely'},
+                            {'label': "Sometimes", 'value': "Sometimes"},
+                            {'label': 'Most of the time', 'value': 'Most of the time'},
+                            {'label': "Always", 'value': "Always"}
+                        ],
+                        value='',
+                        inputStyle={"margin-right": "10px"},
+                        id = 'Q18'
+                    ),
+                    html.Br()
+                ], style={'font-size': '15px', 'marginLeft' : '30px'}),
+                html.Div([
+                    html.Label('Clearing herbaceous brush and trimming branches', style={'font-size': '20px'}),
+                    html.Br(),
+                    html.Br(),
+                    dcc.RadioItems(
+                        options=[
+                            {'label': 'Never', 'value': 'Never'},
+                            {'label': 'rarely', 'value': 'Rarely'},
+                            {'label': "Sometimes", 'value': "Sometimes"},
+                            {'label': 'Most of the time', 'value': 'Most of the time'},
+                            {'label': "Always", 'value': "Always"}
+                        ],
+                        value='',
+                        inputStyle={"margin-right": "10px"},
+                        id = 'Q19'
+                    ),
+                    html.Br()
+                ], style={'font-size': '15px', 'marginLeft' : '30px'}),
+            ]),
+        ], style={'display':'block'}
+    ),
     #######
     #######
     dcc.Link('Next page', href='/page-3', style={'font-size': '20px'}),
@@ -385,6 +398,37 @@ layout = html.Div([
     html.Br(),
     dbc.Progress(value=17, style={"height": "15px"}, className="mb-3", label = "17% done"),
 ])
+
+
+@callback(
+    Output(component_id='dogs', component_property='hidden'),
+    [Input(component_id='Q6', component_property='value')])
+
+def show_hide_element(Q6):
+    if 'Dogs' in Q6:
+        return False
+    else:
+        return True
+    
+@callback(
+    Output(component_id='cats', component_property='hidden'),
+    [Input(component_id='Q6', component_property='value')])
+
+def show_hide_element(Q6):
+    if 'Outdoor_cats' in Q6:
+        return False
+    else:
+        return True
+
+@callback(
+    Output(component_id='courtyard', component_property='hidden'),
+    [Input(component_id='Q11', component_property='value')])
+
+def show_hide_element(Q11):
+    if Q11 == 'yes':
+        return False
+    else:
+        return True
 
 # myquestions = []
 # for i in range(1,21):
